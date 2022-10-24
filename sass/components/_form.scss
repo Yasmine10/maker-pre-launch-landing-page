@@ -1,0 +1,43 @@
+@use "../abstracts/index" as *;
+
+.form-group {
+    
+}
+
+input {
+    outline: none;
+    border: none;
+
+    padding: pxToRem(12) pxToRem(26);
+
+    background-color: $clr-primary-900;
+    border: 2px solid $clr-primary-900;
+    color: $clr-neutral-100;
+    border-radius: 100vmax;
+
+    font-size: var(--fs-btn);
+    line-height: var(--fs-lh-btn);
+
+    transition: all 400ms ease-in-out;
+
+    &::placeholder {
+        color: $clr-neutral-100;
+        opacity: 0.4;
+    }
+
+    &:hover,
+    &:focus-within {
+        color: $clr-neutral-100;
+        border-color: $clr-primary-400;
+    }
+
+    &.invalid {
+        border-color: $clr-accent-400;
+    }
+}
+
+.error-message {
+    margin-top: pxToRem(8);
+    padding-left: pxToRem(18);
+    color: $clr-accent-400;
+}

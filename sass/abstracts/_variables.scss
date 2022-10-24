@@ -1,0 +1,58 @@
+/* Colors */
+
+$clr-primary-400: #3EE9E5;
+$clr-primary-600: #777F98;
+$clr-primary-900: #093F68;
+
+$clr-neutral-100: #FFFFFF;
+$clr-neutral-900: #080C20;
+
+$clr-accent-400: #FF2965;
+
+
+/* Typography */
+
+$ff: 'Manrope', sans-serif;
+
+$fw-regular: 500;   // medium
+$fw-bold: 800;      // extra-bold
+
+:root {
+    --fs-h1: 32px;
+    --fs-h2: 40px;
+    --fs-h3: 24px;
+    --fs-h4: 18px;
+    --fs-body: 15px;
+    --fs-input: 15px;
+    --fs-btn: 15px;
+
+
+    --fs-lh-h1: 40px;
+    --fs-lh-h2: 55px;
+    --fs-lh-h3: 33px;
+    --fs-lh-h4: 25px;
+    --fs-lh-body: 25px;
+    --fs-lh-input: 25px;
+    --fs-lh-btn: 25px;
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --fs-h1: 48px;
+        --fs-h2: 40px;
+        --fs-h3: 32px;
+        --fs-h4: 18px;
+        --fs-body: 15px;
+        --fs-input: 15px;
+        --fs-btn: 15px;
+
+
+        --fs-lh-h1: 56px;
+        --fs-lh-h2: 55px;
+        --fs-lh-h3: 44px;
+        --fs-lh-h4: 25px;
+        --fs-lh-body: 25px;
+        --fs-lh-input: 25px;
+        --fs-lh-btn: 25px;
+    }
+}

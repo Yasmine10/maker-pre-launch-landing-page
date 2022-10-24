@@ -1,0 +1,17 @@
+@use "../abstracts/index" as *;
+
+.container {
+    --spacing: calc(24px * 2);
+
+    @include for-tablet-up {
+        --spacing: calc(98px * 2);
+    }
+
+    @include for-desktop-up {
+        --spacing: calc(165px * 2);
+    }
+
+    width: calc(100% - var(--spacing));
+    max-width: pxToRem(1440);
+    margin-inline: auto;
+}

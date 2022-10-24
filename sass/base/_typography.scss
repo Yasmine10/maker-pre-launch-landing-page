@@ -1,0 +1,64 @@
+@use "../abstracts/index" as *;
+
+body {
+    font-family: $ff;
+    font-size: var(--fs-body);
+    font-weight: $fw-regular;
+    line-height: var(--fs-lh-body);
+}
+
+.h1 {
+    font-size: var(--fs-h1);
+    font-weight: $fw-bold;
+    line-height: var(--fs-lh-h1);
+}
+
+.h2 {
+    font-size: var(--fs-h2);
+    font-weight: $fw-bold;
+    line-height: var(--fs-lh-h2);
+}
+
+.h3 {
+    font-size: var(--fs-h3);
+    font-weight: $fw-bold;
+    line-height: var(--fs-lh-h3);
+}
+
+.h4 {
+    font-size: var(--fs-h4);
+    font-weight: $fw-bold;
+    line-height: var(--fs-lh-h4);
+}
+
+/* Font weights */
+.fw-regular {
+    font-weight: $fw-regular;
+}
+.fw-bold {
+    font-weight: $fw-bold;
+}
+
+
+/* Text colors */
+.txt-primary-400 {
+    color: $clr-primary-400;
+}
+.txt-primary-600 {
+    color: $clr-primary-600;
+}
+.txt-primary-900 {
+    color: $clr-primary-900;
+}
+.txt-neutral-100 {
+    color: $clr-neutral-100;
+}
+.txt-neutral-900 {
+    color: $clr-neutral-900;
+}
+
+
+/* Text options */
+.txt-center {
+    text-align: center;
+}

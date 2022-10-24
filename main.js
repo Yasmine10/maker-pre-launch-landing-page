@@ -1,23 +1,28 @@
-import './style.css'
-import javascriptLogo from './javascript.svg'
-import { setupCounter } from './counter.js'
+const form = document.querySelector('form');
+const email = document.querySelector('#email');
+const errorMessageEmail = document.querySelector('#email-error');
 
-document.querySelector('#app').innerHTML = `
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
-      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
-    </a>
-    <h1>Hello Vite!</h1>
-    <div class="card">
-      <button id="counter" type="button"></button>
-    </div>
-    <p class="read-the-docs">
-      Click on the Vite logo to learn more
-    </p>
-  </div>
-`
+form.addEventListener("submit", (e) => {
+	const emailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+	email.classList.remove("invalid");
 
-setupCounter(document.querySelector('#counter'))
+	if (email.value === "" || email.value == null) {
+		e.preventDefault();
+
+		errorMessageEmail.innerHTML = "Oops! Please add your email";
+		email.classList.add("invalid");
+
+		return false;
+	}
+
+	if (!email.value.match(emailformat)) {
+		e.preventDefault();
+
+		errorMessageEmail.innerHTML = "Oops! That doesn’t look like an email address";
+		email.classList.add("invalid");
+
+		return false;
+	}
+
+	return true;
+});

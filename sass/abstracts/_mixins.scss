@@ -1,0 +1,24 @@
+@use "./functions" as *;
+
+$phone-width: 20em;         // 320px
+$tablet-width: 48em;        // 768px
+$desktop-width: 64em;       // 1024px
+$pxl: 0.0625em;
+
+@mixin for-phone-only {
+    @media (max-width: #{$tablet-width - $pxl}) {
+        @content;
+    }
+}
+
+@mixin for-tablet-up {
+    @media (min-width: $tablet-width) {
+        @content;
+    }
+}
+
+@mixin for-desktop-up {
+    @media (min-width: $desktop-width) {
+        @content;
+    }
+}

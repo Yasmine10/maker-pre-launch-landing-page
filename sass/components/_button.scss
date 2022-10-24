@@ -1,0 +1,36 @@
+@use "../abstracts/index" as *;
+
+.btn {
+    text-decoration: none;
+    border: none;
+    background: none;
+
+    display: block;
+    width: fit-content;
+    height: min-content;
+
+    padding: pxToRem(12) pxToRem(26);
+    border-radius: 100vmax;
+
+    font-size: var(--fs-btn);
+    font-weight: $fw-bold;
+    line-height: var(--fs-lh-btn);
+
+    text-align: center;
+
+    cursor: pointer;
+
+    transition: all 500ms ease-in-out;
+
+    &--primary {
+        background-color: $clr-primary-400;
+        border: 2px solid $clr-primary-400;
+        color: $clr-primary-900;
+
+        &:hover,
+        &:focus-visible {
+            background-color: transparent;
+            color: $clr-neutral-100;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+@use "../abstracts/index" as *;
+
+.header-primary {
+    margin-bottom: pxToRem(65.5);
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+
+        margin-top: pxToRem(40);
+    }
+}
