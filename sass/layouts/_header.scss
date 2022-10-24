@@ -9,4 +9,23 @@
 
         margin-top: pxToRem(40);
     }
+
+    @include for-tablet-up {
+        margin-bottom: pxToRem(77.5);
+
+        &__logo {
+            justify-content: flex-start;
+            width: calc(100% - 78px);
+            margin-inline: auto;
+        }
+    }
+
+    @include for-desktop-up {
+        margin-bottom: pxToRem(114);
+
+        &__logo {
+            width: calc(100% - 330px);
+            max-width: pxToRem(1440);
+        }
+    }
 }
