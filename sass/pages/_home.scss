@@ -70,8 +70,9 @@
         justify-content: space-between;
         gap: pxToRem(30);
 
-        max-width: initial;
+        max-width: pxToRem(1440);
         margin-bottom: pxToRem(202);
+        padding-inline: pxToRem(165);
     }
     
     &__item {
@@ -222,6 +223,10 @@
             background-color: $clr-primary-900;
 
             margin-bottom: pxToRem(65);
+
+            @include for-desktop-up {
+                margin-bottom: 0;
+            }
 
             &::before {
                 content: url('../../assets/icon-free.svg');
